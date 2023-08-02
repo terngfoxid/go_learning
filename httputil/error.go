@@ -22,3 +22,18 @@ type HTTPSuccess struct {
 	Message string `json:"message" example:"status ok"`
 	Detail  string `json:"Detail" example:"id 30 is deleted"`
 }
+
+type HTTPFileSuccess struct {
+	Code    int    `json:"code" example:"200"`
+	Message string `json:"message" example:"Your file has been successfully uploaded."`
+}
+
+type HTTPFileError5 struct {
+	Code    int    `json:"code" example:"500"`
+	Message string `json:"message" example:"Unable to save the file"`
+}
+
+type HTTPFileError4 struct {
+	Code    int    `json:"code" example:"400"`
+	Message string `json:"message" example:"No file is received"`
+}

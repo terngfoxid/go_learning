@@ -22,6 +22,7 @@ func SetupRouter() *gin.Engine {
 		grp1.PUT("user/:id", Controllers.UpdateUser)
 		grp1.DELETE("user/:id", Controllers.DeleteUser)
 	}
+	r.POST("/upload", Controllers.UploadFile)
 	r.GET("/docs/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 	return r
 }
