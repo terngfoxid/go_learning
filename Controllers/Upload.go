@@ -10,20 +10,6 @@ import (
 	"github.com/google/uuid"
 )
 
-// Uploadfile
-//
-//	@Summary		Upload file
-//	@Description	Server receive file
-//	@Tags			File
-//	@Accept			file
-//	@Produce		json
-//	@Param			file
-//	@Success		200	{object}	httputil.HTTPFileSuccess
-//	@Failure		400	{object}	httputil.HTTPFileError4
-//	@Failure		404	{object}	httputil.HTTPFileError4
-//	@Failure		500	{object}	httputil.HTTPFileError5
-//	@Router			/user [post]
-
 func UploadFile(c *gin.Context) {
 	c.Header("Access-Control-Allow-Origin", "*")
 	c.Header("Access-Control-Allow-Methods", "POST")
